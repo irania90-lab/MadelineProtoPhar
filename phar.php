@@ -58,8 +58,9 @@ function ___install_madeline()
     if (PHP_MAJOR_VERSION <= 5) {
         $release_branch = '5'.$release_branch;
         $release_default_branch = '5';
-    } elseif (PHP_MINOR_VERSION >= 3) {
-        $release_branch = '';
+    } elseif (PHP_MINOR_VERSION === 0) {
+        $release_branch = '5'.$release_branch;
+        $release_default_branch = '5';
     }
 
     // Checking if defined branch/default branch builds can be downloaded
