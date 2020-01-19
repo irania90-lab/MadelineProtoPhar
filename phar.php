@@ -95,6 +95,7 @@ function ___install_madeline()
             };
             $previous = $extractVersions();
             $previous['danog/madelineproto'] = 'old';
+            if (strpos($release, 'trigger')) $previous = [];
 
             \file_put_contents('madeline.phar', $phar);
             \file_put_contents('madeline.phar.version', $release);
